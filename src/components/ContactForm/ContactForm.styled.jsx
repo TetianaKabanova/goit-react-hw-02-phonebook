@@ -1,24 +1,30 @@
 import styled from '@emotion/styled';
 
-export const ContactsList = styled.ul`
+export const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  justify-content: center;
   align-items: center;
 `;
+export const Label = styled.label`
+  color: ${p => p.theme.colors.primary};
+`;
+export const Input = styled.input`
+  padding-top: ${p => p.theme.space[3]}px;
+  padding-bottom: ${p => p.theme.space[3]}px;
+  padding-left: ${p => p.theme.space[4]}px;
+  padding-right: ${p => p.theme.space[4]}px;
 
-export const ContactItem = styled.li`
-  justify-content: space-between;
-  gap: 16px;
+  border: ${p => p.theme.border.none};
+  outline: 0;
+  border-radius: ${p => p.theme.space[4]}px;
+  color: ${props => props.theme.colors.primary};
+  text-shadow: ${p => p.theme.boxShadow.textShadow};
+
+  background-color: transparent;
+  box-shadow: ${p => p.theme.boxShadow.boxShadow};
 `;
 
-export const Contact = styled.p`
-  font-size: ${p => p.theme.fontSize.m};
-  color: ${p => p.theme.colors.secondary};
-`;
-
-export const DeleateButton = styled.button`
+export const SubmitButton = styled.button`
   padding-top: ${p => p.theme.space[2]}px;
   padding-bottom: ${p => p.theme.space[2]}px;
   padding-left: ${p => p.theme.space[3]}px;
@@ -43,4 +49,11 @@ export const DeleateButton = styled.button`
   &:active {
     background-color: ${p => p.theme.colors.dark};
   }
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-left: ${p => p.theme.space[4]}px;
 `;

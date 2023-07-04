@@ -1,12 +1,10 @@
 import PropTypes from 'prop-types';
-import { Title } from './Layout.styled';
+import { Title } from './Section.styled';
 
-const GlobalTitle = ({ title }) => {
+export const GlobalTitle = ({ title }) => {
   return <Title>{title}</Title>;
 };
 
 GlobalTitle.propTypes = {
   title: PropTypes.string.isRequired,
 };
-
-export default GlobalTitle;

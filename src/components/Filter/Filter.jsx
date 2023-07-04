@@ -1,20 +1,26 @@
-import React from 'react';
-import { FormFilter, LabelFilter } from './Filter.styled';
-import { Input } from '../FormList/FormList.styled';
+import PropTypes from 'prop-types';
+import { FilterWrap, FilterLabel, FilterInput } from './Filter.styled';
 
-const Filter = ({ value, onChange }) => {
+export const Filter = ({ value, onChange }) => {
   return (
-    <FormFilter>
-      <LabelFilter>
-        <Input
-          type="name"
+    <FilterWrap>
+      <FilterLabel>
+        <FilterInput
+          type="text"
+          name="name"
+          pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+          title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+          required
           value={value}
           onChange={onChange}
-          placeholder="Please enter a name to search"
+          placeholder="Type a name to search"
         />
-      </LabelFilter>
-    </FormFilter>
+      </FilterLabel>
+    </FilterWrap>
   );
 };
 
-export default Filter;
+Filter.propTypes = {
+  value: PropTypes.string,
+  onChange: PropTypes.func.isRequired,
+};
