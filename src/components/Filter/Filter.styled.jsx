@@ -10,7 +10,6 @@ export const FilterLabel = styled.label`
 `;
 
 export const FilterInput = styled.input`
-
   width: 320px;
   margin-bottom: ${p => p.theme.space[4]}px;
   outline: none;
@@ -24,4 +23,5 @@ export const FilterInput = styled.input`
   :focus,
   :hover {
     box-shadow: ${p => p.theme.boxShadow.boxShadow};
+  }
 `;
