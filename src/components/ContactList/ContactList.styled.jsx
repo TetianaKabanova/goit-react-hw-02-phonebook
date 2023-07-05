@@ -3,44 +3,37 @@ import styled from '@emotion/styled';
 export const ContactsList = styled.ul`
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 `;
 
 export const ContactItem = styled.li`
-  justify-content: space-between;
-  gap: 16px;
+  display: flex;
+  align-items: center;
+  margin: 10px;
+  gap: 50px;
 `;
 
 export const Contact = styled.p`
-  font-size: ${p => p.theme.fontSize.m};
-  color: ${p => p.theme.colors.secondary};
+  color: ${p => p.theme.colors.primary};
 `;
 
 export const DeleateButton = styled.button`
-  padding-top: ${p => p.theme.space[2]}px;
-  padding-bottom: ${p => p.theme.space[2]}px;
-  padding-left: ${p => p.theme.space[3]}px;
-  padding-right: ${p => p.theme.space[3]}px;
-  font-size: ${p => p.theme.fontSize.l};
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: ${p => p.theme.fontSize.s};
   font-weight: bold;
-  color: ${p => p.theme.colors.primary};
-  background-color: ${p => p.theme.colors.success};
+  padding: 5px 10px 5px;
+  color: ${p => p.theme.colors.light};
+  background-color: ${p => p.theme.colors.primary};
   border: ${p => p.theme.border.none};
   border-radius: ${p => p.theme.space[3]}px;
   transition: background-color 0.3s ease;
 
-  &:hover {
-    background-color: ${p => p.theme.colors.light};
-  }
-
-  &:focus {
-    outline: none;
+  :hover,
+  :focus {
+    background-color: ${p => p.theme.colors.danger};
     box-shadow: ${p => p.theme.boxShadow.boxShadow};
-  }
-
-  &:active {
-    background-color: ${p => p.theme.colors.dark};
   }
 `;

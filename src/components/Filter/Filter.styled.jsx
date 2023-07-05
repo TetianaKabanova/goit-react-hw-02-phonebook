@@ -3,27 +3,25 @@ import styled from '@emotion/styled';
 export const FilterWrap = styled.div`
   display: flex;
   justify-content: center;
-  gap: 8px;
-  margin-left: ${p => p.theme.space[4]}px;
 `;
 
-export const FilterLabel = styled.p`
-  font-size: ${p => p.theme.fontSize.m};
+export const FilterLabel = styled.label`
   color: ${p => p.theme.colors.secondary};
 `;
 
 export const FilterInput = styled.input`
-  padding-top: ${p => p.theme.space[3]}px;
-  padding-bottom: ${p => p.theme.space[3]}px;
-  padding-left: ${p => p.theme.space[4]}px;
-  padding-right: ${p => p.theme.space[4]}px;
 
-  border: ${p => p.theme.border.none};
-  outline: 0;
-  border-radius: ${p => p.theme.space[4]}px;
-  color: ${props => props.theme.colors.primary};
+  width: 320px;
+  margin-bottom: ${p => p.theme.space[4]}px;
+  outline: none;
+  padding: 10px;
+  font-size: ${p => p.theme.fontSize.s};
+  color: ${props => props.theme.colors.secondary};
   text-shadow: ${p => p.theme.boxShadow.textShadow};
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  border-radius: ${p => p.theme.space[2]}px;
 
-  background-color: transparent;
-  box-shadow: ${p => p.theme.boxShadow.boxShadow};
+  :focus,
+  :hover {
+    box-shadow: ${p => p.theme.boxShadow.boxShadow};
 `;
